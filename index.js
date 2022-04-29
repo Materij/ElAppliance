@@ -34,7 +34,7 @@ class Computer extends ElectricalAppliance {
         this.isPlugged = false;
     }
 }
-// Прибор 3
+// Device 3
 class RobotVacuumCleaner extends ElectricalAppliance {
     constructor (name, brand, power, functionality, cleaningType, smartHome) {
         super(name, power);

@@ -4,18 +4,18 @@ class ElectricalAppliance {
         this.power = power;
         this.isPlugged = false;
     }
-    // метод, который определяет прибор как включенный в розетку
+    // a method that identifies the appliance as being plugged into an outlet
     plugIn() {
         console.log(this.name + " is plugged!");
         this.isPlugged = true;
     }
-    // метод, который определяет прибор как выключеный из розетки
+    // method that detects the appliance as unplugged
     unplug() {
         console.log(this.name + " is unplugged!");
         this.isPlugged = false;
     }
 }
-// Прибор 1
+// Device 1
 class Lamp extends ElectricalAppliance {
     constructor (name, brand, power, bulbType) {
         super(name, power);
@@ -24,7 +24,7 @@ class Lamp extends ElectricalAppliance {
         this.isPlugged = true;
     }
 }
-// Прибор 2
+// Device 2
 class Computer extends ElectricalAppliance {
     constructor (name, brand, power, type, functionality) {
         super(name, power);
@@ -45,19 +45,19 @@ class RobotVacuumCleaner extends ElectricalAppliance {
         this.isPlugged = false;
     }
 }
-// экземпляр лампы
+// lamp instance
 const tableLamp = new Lamp("Table lamp", "Xiaomi", 5, "LED");
-// экземпляр компьютера
+// computer instance
 const homePC = new Computer("Table PC", "Intel", 120, "stationary", "for work");
-// экземпляр робота-пылесоса
+// robot vacuum cleaner instance
 const vacuum = new RobotVacuumCleaner ("Mop 2", "Xiaomi", 220, "multi", "dry and wet cleaning", "used app");
-// отключить лампу из розетки
+// unplug the lamp
 tableLamp.unplug();
-// включить homePC в розетку
+// plug homePC
 homePC.plugIn();
-// отключить робот-пылесос из розетки
+// unplug the robot vacuum cleaner
 vacuum.plugIn();
-// результат
+// result
 console.log(homePC);
 console.log(tableLamp);
 console.log(vacuum);
